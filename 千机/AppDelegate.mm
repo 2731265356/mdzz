@@ -55,7 +55,7 @@
         self.window.rootViewController = nav;
     }
    
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];//sdaas
     return YES;
     return YES;
 }
