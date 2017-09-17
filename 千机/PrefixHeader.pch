@@ -1,0 +1,53 @@
+//
+//  PrefixHeader.pch
+//  Tea
+//
+//  Created by 淇翔科技 on 16/4/14.
+//  Copyright © 2016年 安鑫一家. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "Masonry.h"
+#import "LeNavigationController.h"
+#import "BXTextField.h"
+#import "CheakNumber.h"
+#import "BXAlertView.h"
+#import "UIImageView+WebCache.h"
+#import "AFNetworking.h"
+#import "MHNetwrok.h"
+#import "AFHTTPSessionManager.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
+#import "BXHttpRequest.h"
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import "NSString+MD5.h"
+#import "NSString+Base64.h"
+#import "User.h"
+
+
+#define K_URL(api) [NSString stringWithFormat:@"https://openservice.wisdomsky.cn/qianji/api/v1/%@/",api]
+
+
+
+#define k_content_type @"application/json"//@"application/x-www-form-urlencoded"
+
+#define KSCREENWIDTH     [UIScreen mainScreen].bounds.size.width
+#define KSCREENHEIGHT     [UIScreen mainScreen].bounds.size.height
+//字体
+#define UIFONT(m) [UIFont systemFontOfSize:m];
+//获得RGB颜色
+#define RGBA(r, g, b, a)           [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r, g, b)               RGBA(r, g, b, 1.0f)
+#define COLORWITHRED(_redNum_,_greenNum_,_blueNum_,_alpha_)  [UIColor colorWithRed:_redNum_/255.0 green:_greenNum_/255.0  blue:_blueNum_/255.0  alpha:_alpha_]
+#define COLOR(_redNum_,_greenNum_,_blueNum_) COLORWITHRED(_redNum_, _greenNum_, _blueNum_, 1)
+#define COLOR153 COLOR(153,153,153)
+#define COLOR34 COLOR(34,34,34)
+
+#define FONT(size)  ([UIFont systemFontOfSize:size])
+#define BlODFONT(size) [UIFont boldSystemFontOfSize:size]
+
+#define ALERTVIEW(title,message,cancel,other)  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:cancel otherButtonTitles:other, nil]; //[alertView show];
+#endif
